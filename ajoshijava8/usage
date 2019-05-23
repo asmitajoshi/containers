@@ -1,0 +1,8 @@
+# versioning a container
+sudo docker build -t ajoshijava8:v1 .
+sudo docker run -it ajoshijava8:v1 bash
+
+# mounting a directory that is writable on host box and in container
+sudo docker build -t ajoshijava8 .
+sudo docker run --mount type=bind,source="$(pwd)"/adir,target=/usr/adir -it ajoshijava8 bash
+
